@@ -16,5 +16,10 @@ public abstract class Product {
     public double getPrice() { return price; }
     public int getQuantity() { return quantity; }
 
-    public abstract String display();
+   public void reduceQuantity(int amount) {
+        this.quantity -= amount;
+    }
+
+    public abstract boolean isShipping();
+    public abstract boolean canExpire();
 }

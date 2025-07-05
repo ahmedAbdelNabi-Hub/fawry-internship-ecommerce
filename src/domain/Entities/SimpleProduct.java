@@ -9,8 +9,13 @@ public class SimpleProduct extends Product {
     }
 
     @Override
-    public String display() {
-        return String.format("Simple Product: %s, Price: %.2f, Quantity: %d", getName(), getPrice(), getQuantity());
+    public boolean isShipping() {
+        return false;
+    }
+
+    @Override
+    public boolean canExpire() {
+        return false;
     }
 
 }

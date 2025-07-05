@@ -12,13 +12,21 @@ public class ShippableProduct extends Product implements IShippable {
         this.weight = weight;
     }
 
-    @Override
-    public String display() {
-        return String.format("Shippable Product: %s, Price: %.2f, Quantity: %d, Weight: %.2f kg", getName(), getPrice(), getQuantity(), weight);
-    }
 
     public double getWeight() {
         return weight;
+    }
+
+
+    @Override
+    public boolean isShipping() {
+        return true;
+    }
+
+
+    @Override
+    public boolean canExpire() {
+        return false;
     }
     
 }
